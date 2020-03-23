@@ -1,0 +1,13 @@
+.data
+	promptUser: .asciiz "Enter the value"
+
+.text
+	main:
+
+
+
+
+	
+
+	li $v0, 10
+	syscall 
