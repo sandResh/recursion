@@ -1,6 +1,6 @@
 .data
 	promptUser: .asciiz "Enter the value"
-	theString: .space 1000
+	theString: .space 100
 	#Error Messages
 	INVALID_INPUT: .asciiz  "Invalid input"
 
