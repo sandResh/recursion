@@ -23,3 +23,7 @@
 
 helperFunction:
 		move $t0, $a0
+		li $s0, 0				#Initializing registers to store value of decimal
+		li $s7, 0				# Flag to help check space in the middle of string($s0 is 1 after first non space character is encountered, otherwise 0)
+		li $t4, 1				# Initializing power to be multiplied
+		li $s1, 30				# Base
