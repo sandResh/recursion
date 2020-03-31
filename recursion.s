@@ -34,4 +34,6 @@ helperFunction:
 		addi $t0, $t0, 1
 		beq $t2, 32, checkSpaceLen    # If current character is space move to beginning of the loop without incrementing the counter
 		li $s7, 1		     # Whenever nonspace character is encountered set $s7 to 1
-		
+		addi $t1, $t1, 1
+		bgt $t1, 20, tooLong
+		j length
