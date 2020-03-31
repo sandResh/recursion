@@ -31,3 +31,7 @@ helperFunction:
 	length:
 		lb $t2, 0($t0)
 		beq $t2, 10, checkEmpty     # If \n is encountered move to converting part
+		addi $t0, $t0, 1
+		beq $t2, 32, checkSpaceLen    # If current character is space move to beginning of the loop without incrementing the counter
+		li $s7, 1		     # Whenever nonspace character is encountered set $s7 to 1
+		
