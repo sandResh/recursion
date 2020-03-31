@@ -11,6 +11,8 @@
 		la $a0, theString
 		syscall
 
+	la $a0, theString
+    jal helperFunction
 
 
 
@@ -18,3 +20,6 @@
 
 	li $v0, 10
 	syscall 
+
+helperFunction:
+		move $t0, $a0
