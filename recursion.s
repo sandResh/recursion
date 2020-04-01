@@ -52,4 +52,10 @@ helperFunction:
 
 	
 
-	
+	# Ignore the spaces at the end of theString, if space found in the middle print error message
+	checkSpace:
+		addi $t0, $t0, -1         # Go to one character backward in the string
+		lb $t2, 0($t0)
+		addi $t1, $t1, -1
+		beq $t2, 32, checkSpace   # If character ahead is also space, go to checkSpace
+		
