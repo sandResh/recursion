@@ -79,4 +79,13 @@ helperFunction:
 
 		blt $t2, 65, invalidChar
 		blt $t2, 85, convertUpper
-		
+		blt $t2, 97, invalidChar
+		blt $t2, 117, convertLower
+
+		j invalidChar
+
+	convertNum:
+		addi $t5, $t2, -48				# Get the value of number character
+		j compute
+
+	
