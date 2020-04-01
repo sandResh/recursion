@@ -110,4 +110,10 @@ helperFunction:
 		syscall
 		jr $ra
 
+	empty:
+ 		li $v0, 4
+ 		la $a0, INVALID_INPUT
+ 		syscall
+ 		jr $ra
+	
 	
