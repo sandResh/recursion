@@ -96,4 +96,12 @@ helperFunction:
 		addi $t5, $t2, -87
 		j compute
 
+	compute:
+		mult $t5, $t4 					# Multilpy the value with power
+		mflo $t5					# Move result of multiplication to $t5
+		add $s0, $s0, $t5 				# Increment the decimal value by result of multiplication
+		mult $t4, $s1					# Multiply the power by 30
+		mflo $t4
+		j convert 					# Jump back to convert
+
 	
