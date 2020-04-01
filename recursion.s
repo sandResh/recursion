@@ -72,4 +72,11 @@ helperFunction:
 		li $s7, 0 		# Reset $s7 to 0 before converting
 		j convert
 
-	
+	# Convert valid characters to decimal and increments the result, return error if invalid character is found
+	convertChar:
+		blt $t2, 48, invalidChar      	# If char is less than 48, invalid char
+		blt $t2, 58, convertNum  	# If char is between 48 and 57, char is a number
+
+		blt $t2, 65, invalidChar
+		blt $t2, 85, convertUpper
+		
