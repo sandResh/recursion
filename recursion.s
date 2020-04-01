@@ -62,4 +62,9 @@ helperFunction:
 		add $t0, $t0, 1				# Before going back to convert increment character in the string, because character is decremented at the beginning of 								convert
 		j convert 					# jump to convert
 	
+	checkSpaceLen:
+		beq $s7, 0, length
+		add $t1, $t1, 1
+		j length
+
 	
