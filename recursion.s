@@ -88,4 +88,12 @@ helperFunction:
 		addi $t5, $t2, -48				# Get the value of number character
 		j compute
 
+	convertUpper:
+		addi $t5, $t2, -55
+		j compute
+
+	convertLower:
+		addi $t5, $t2, -87
+		j compute
+
 	
