@@ -46,4 +46,10 @@ helperFunction:
 		addi $t0, $t0, -1     # Move one character backward in the string
 		lb $t2, 0($t0)
 		beq $t2, 32, checkSpace   # If character is space go to checkSpace to check whether the space is at middle of string or not
-		
+		li $s7, 1			# Whenever nonspace character is encountered set $s7 to 1
+		addi $t1, $t1, -1		# Decrement $t1 by 1
+		j convertChar
+
+	
+
+	
