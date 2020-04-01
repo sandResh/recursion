@@ -67,4 +67,9 @@ helperFunction:
 		add $t1, $t1, 1
 		j length
 
+	checkEmpty:
+		beq $t1, 0, empty
+		li $s7, 0 		# Reset $s7 to 0 before converting
+		j convert
+
 	
