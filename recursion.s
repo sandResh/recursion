@@ -58,4 +58,8 @@ helperFunction:
 		lb $t2, 0($t0)
 		addi $t1, $t1, -1
 		beq $t2, 32, checkSpace   # If character ahead is also space, go to checkSpace
-		
+		beq $s7, 1, invalidChar          # If character is not space, check whether a non space character is encountered already, if yes($s7=1) add one to the length($t1)
+		add $t0, $t0, 1				# Before going back to convert increment character in the string, because character is decremented at the beginning of 								convert
+		j convert 					# jump to convert
+	
+	
