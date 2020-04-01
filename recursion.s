@@ -122,4 +122,8 @@ helperFunction:
 	 	syscall
 	 	jr $ra
 
-	
+	invalidChar:
+	 	li $v0, 4
+	 	la $a0, INVALID_INPUT
+	 	syscall
+	 	jr $ra
