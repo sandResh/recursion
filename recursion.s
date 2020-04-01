@@ -104,4 +104,10 @@ helperFunction:
 		mflo $t4
 		j convert 					# Jump back to convert
 
+	printDecimal:
+		li $v0, 1
+		add $a0, $s0, $zero
+		syscall
+		jr $ra
+
 	
